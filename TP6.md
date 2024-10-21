@@ -58,4 +58,23 @@ rtt min/avg/max/mdev = 57.649/63.381/67.739/3.322 ms
 LISTEN 0      511          0.0.0.0:80        0.0.0.0:*    users:(("nginx",pid=1722,fd=6),("nginx",pid=1721,fd=6))
 LISTEN 0      511             [::]:80           [::]:*    users:(("nginx",pid=1722,fd=7),("nginx",pid=1721,fd=7))
 ```
-
+☀️ Ouvrir ce port dans le firewall
+```powershell
+[benjam1@web network-scripts]$ sudo firewall-cmd --permanent --add-port=80/tcp
+success
+[benjam1@web network-scripts]$ sudo firewall-cmd --list-all
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: enp0s8
+  sources:
+  services: cockpit dhcpv6-client ssh
+  ports: 80/tcp
+  protocols:
+  forward: yes
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+```
