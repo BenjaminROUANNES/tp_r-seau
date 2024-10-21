@@ -78,3 +78,4 @@ public (active)
   icmp-blocks:
   rich rules:
 ```
+☀️ Visitez le site web ! 
